@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    background-image: url('../Images/Background_Design.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(26, 32, 44, 0.75);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    opacity: 0.85;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-highlight {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #38b2ac, #ec4899, #9f7aea);
+}
+
+.sub-hero {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    background-color: #1a202c;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+}
+
+.label {
+    color: #63b3ed;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.signup-button {
+    background-image: linear-gradient(to right, #6b46c1, #38a169);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.signup-button:hover {
+    background-image: linear-gradient(to right, #ec4899, #38a169);
+    transform: scale(1.05);
+}
+
+
+
+/* Footer positioned at the bottom-right */
+.footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.875rem;
+    text-align: right;
+    color: #718096;
+}
+
+.footer-link {
+    color: #718096;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Right Column - Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 400px;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 300px; /* Limit the logo width */
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loading-spinner {
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hidden class for fading out the loading screen */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Fade-out animation for the content before loading screen */
+.content-container.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+

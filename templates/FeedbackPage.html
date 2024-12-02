@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eva - Feedback Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Feedbackpage.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" /> <!-- Prism CSS for syntax highlighting -->
+</head>
+
+<body>
+    <div class="feedback-container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="Small Logo" class="small-logo" />
+            <span class="hero-highlight">EVA</span>
+        </div>
+
+        <div class="content">
+            <div class="left-column">
+                <form id="feedback-form">
+                    <div class="chat-section">
+                        <h2 class="section-title">Activity Instruction</h2>
+                        <div class="chat-box">
+                            <textarea name="ActivityInstruction" class="chat-input" placeholder="Enter your instruction here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="chat-section">
+                        <h2 class="section-title">My Code Solution</h2>
+                        <div class="chat-box">
+                            <textarea name="ActivityCode" class="chat-input" placeholder="Enter your code here..."></textarea>
+                            <div class="chat-buttons">
+                                <button type="submit" class="send-button">
+                                    <img src="{{ url_for('static', filename='Images/send-icon.png') }}" alt="Send" class="button-icon" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Scrollable feedback box -->
+            <div class="feedback-box">
+                <h2 class="feedback-title">Generated Feedback</h2>
+                <div id="feedback-content" class="feedback-content">
+                    <p>Feedback will appear here once generated...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script> <!-- Prism JS -->
+    <script src="{{ url_for('static', filename='js/FeedbackPage.js') }}"></script>
+</body>
+</html>

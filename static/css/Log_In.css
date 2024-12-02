@@ -1,0 +1,79 @@
+.modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal .modal-content {
+    /* background-color: #0091AD; */
+    background-color: rgba(0, 145, 173, 0.8);
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative;
+  }
+  
+  /* Close Button */
+  .CloseBtn {
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .CloseBtn:hover {
+    color: red;
+  }
+  
+  /* Form Styles */
+  form {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input-field {
+    width: 100%; /* w-full */
+    border: 1px solid #D1D5DB; /* border-gray-300 */
+    border-radius: 0.25rem; /* rounded */
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem; /* px-3 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+}
+  .input-field:focus {
+    outline: 2px solid transparent; /* focus:ring */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 */
+    border-color: #3B82F6; /* focus:border-blue-500 */
+}
+
+  
+  .ClassBtnSubmit {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .ClassBtnSubmit:hover {
+    background-color: #0056b3;
+  }
+  
